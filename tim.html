@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href ="tim.css"/>
+        <title>page</title>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+        <style></style>
+    </head>
+    <body>
+        <h1>Paatu Undo?</h1>
+
+        <div class = "shade_class">
+            <div class ="shade shade-1"></div>
+            <div class ="shade shade-2"></div>
+            <div class ="shade shade-3"></div>
+            <div class ="shade shade-4"></div>
+        </div>
+
+        <nav>
+            <a href = "#">Artists</a>
+            <a href = "#">Mood</a>
+        </nav>
+
+        <div class = "myimage">
+            <img src = "./singing_image.png" class = "rotate">
+        </div>
+
+
+        <div class = "buttonclass">
+            <button>Play</button>
+        </div>
+      <div class = "audio-box">
+      <audio id = "player" controls></audio>
+    </div>
+    <br>
+      <div class = "song_buttons">
+      <button onclick="playsong(0)">Enjoy</button>  
+      <button onclick="playsong(1)">Sunday Drive</button>  
+      <button onclick="playsong(2)">Quite Fields</button> 
+      </div>
+
+
+      <script>
+    const songs = [
+        "audio/enjoy.mp3",
+        "audio/sunday_drive.mp3",
+        "audio/quite_fields.mp3"
+    ];
+
+    let player = document.getElementById("player");
+
+    function playsong(index){
+        player.src =songs[index];
+        player.play();
+    }
+</script>
+    </body>
+</html>
